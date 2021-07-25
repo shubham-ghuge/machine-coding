@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import { ProductListing } from "../ProductListing";
+import { Home } from "../Home";
 import styles from "./App.module.scss";
 
 function App() {
   return (
     <div className={styles.App}>
       <Routes>
-        <Route path="/" element={<ProductListing />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   );
