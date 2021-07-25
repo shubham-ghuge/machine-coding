@@ -6,7 +6,6 @@ function Filters() {
   return (
     <div className="w-40 mt-6 pt-6">
       <h2>Sort Products</h2>
-      <button className="btn-primary my-2">Clear filters</button>
       <div className="mb-4">
         <h3>By Price</h3>
         <label>

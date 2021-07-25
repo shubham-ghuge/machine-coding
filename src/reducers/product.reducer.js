@@ -37,7 +37,10 @@ export function productReducer(state, action) {
                 if (i.name === name) i.isSelected = !status;
                 return i
             })
-            const brandsSelected = state.brands.map((i) => i.isSelected && i.name)
+            const brandsSelected = state.brands.map((i) => i.isSelected && i.name).filter(i => i)
+            if (brandsSelected.length === 0) {
+                return { ...state, data: state.initialData }
+            }
             return {
                 ...state,
                 data: state.initialData.filter(i => brandsSelected.includes(i.brand))
